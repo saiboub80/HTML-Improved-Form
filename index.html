@@ -9,25 +9,36 @@
 <body>
     <nav>
         Enter the Contest for the Vacation of a Lifetime
+
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">
+                    <label for="firstname">Your First Name</label>*
+                </span>
+
+                <input type="text" id="firstname" name="firstname"  minlength="2" maxlength="35" required>
+                
+                <span class="required-field"><label for="lastname">Your Last Name</label>*
+                </span>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35"required>
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5> must be age 21 or older to enter the contest.</h5>
+
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <span class="required-field"><label for="email">Your Email</label>*
+                </span>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" >
                 </div>
                 <div>
                     <label for="city">Your City</label>
